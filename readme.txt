@@ -1,4 +1,5 @@
-Contributors: mightyminnow, aebs90
+=== Elementor - Image Widget Custom Alt Text ===
+Contributors: MIGHTYminnow, aebs90
 Requires at least: 6.2
 Tested up to: 6.2
 Requires PHP: 8.0
@@ -30,3 +31,8 @@ The **Alternative Text** field is set by default to **"Attachment Alt Text"**, t
 1. The Image Widget settings before adding this plugin.
 2. The Image Widget settings after adding this plugin.
 3. The 3 different options for the Alternative Text.
+
+== Changelog ==
+
+= 1.0.0 =
+First Release
