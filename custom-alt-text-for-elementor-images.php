@@ -6,7 +6,7 @@
  * Version: 1.0.0
  * Author: MIGHTYminnow
  * Author URI: https://mightyminnow.com
- * Text Domain: eiwcat
+ * Text Domain: catei
  */
 
 class Image_Widget_Custom_Alt {
@@ -23,13 +23,13 @@ class Image_Widget_Custom_Alt {
 		$element->add_control(
 			'alt_text_type',
 			[
-				'label' => esc_html__( 'Alternative Text', 'eiwcat' ),
+				'label' => esc_html__( 'Alternative Text', 'catei' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'attachment',
 				'options' => [
-					'attachment'  => esc_html__( 'Attachment Alt Text', 'eiwcat' ),
-					'none' => esc_html__( 'None', 'eiwcat' ),
-					'custom' => esc_html__( 'Custom', 'eiwcat' ),
+					'attachment'  => esc_html__( 'Attachment Alt Text', 'catei' ),
+					'none' => esc_html__( 'None', 'catei' ),
+					'custom' => esc_html__( 'Custom', 'catei' ),
 				],
 			]
 		);
@@ -37,7 +37,7 @@ class Image_Widget_Custom_Alt {
 		$element->add_control(
 			'custom_alt_text',
 			[
-				'label' => esc_html__( 'Custom Alt Text', 'eiwcat' ),
+				'label' => esc_html__( 'Custom Alt Text', 'catei' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'condition' => [
 					'alt_text_type' => 'custom',
