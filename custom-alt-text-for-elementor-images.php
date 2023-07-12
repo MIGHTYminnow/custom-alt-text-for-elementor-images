@@ -48,31 +48,39 @@ class Image_Widget_Custom_Alt {
 
 	public function after_render( $element ) {
 		if ( 'image' === $element->get_name() ) {
-			remove_filter( 'get_post_metadata', [ $this, 'replace_alt_text' ] );
+			remove_filter( 'elementor/image_size/get_attachment_image_html', [ $this, 'replace_alt_text' ] );
 		}
 	}
 
 	public function before_render( $element ) {
 		if ( 'image' === $element->get_name() ) {
 			$this->element = $element;
-			add_filter( 'get_post_metadata', [ $this, 'replace_alt_text' ], 10, 4 );
+			add_filter( 'elementor/image_size/get_attachment_image_html', [ $this, 'replace_alt_text' ], 10, 4 );
 		}
 	}
 
-	public function replace_alt_text( $value, $object_id, $meta_key, $single ) {
-		if ( '_wp_attachment_image_alt' === $meta_key ) {
-			switch ( $this->element->get_settings( 'alt_text_type' ) ) {
-				case 'custom' :
-					return $this->element->get_settings( 'custom_alt_text' );
-					break;
-				case 'none':
-					return '';
-					break;
-				default:
-					return $value;
-			}
+	public function replace_alt_text( $html, $settings, $image_size_key, $image_key ) {
+		$image = $settings[ $image_key ];
+		$alt = \Elementor\Control_Media::get_image_alt( $image );
+
+		switch ( $this->element->get_settings( 'alt_text_type' ) ) {
+			case 'custom' :
+				return str_replace(
+					'alt="' . $alt . '"',
+					'alt="' . $this->element->get_settings( 'custom_alt_text' ) . '"',
+					$html
+				);
+				break;
+			case 'none':
+				return str_replace(
+					'alt="' . $alt . '"',
+					'alt=""',
+					$html
+				);
+				break;
+			default:
+				return $html;
 		}
-		return $value;
 	}
 
 }
