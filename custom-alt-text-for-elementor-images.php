@@ -3,7 +3,7 @@
  * Plugin Name: Custom Alt Text for Elementor Images
  * Plugin URI: https://github.com/MIGHTYminnow/custom-alt-text-for-elementor-images
  * Description: Adds options to the Elementor Image Widget, allowing you to set custom alt text, use the attachment alt text, or choose no alt text. This gives you more control over accessibility and SEO for your website's images.
- * Version: 1.0.0
+ * Version: 1.0.1-beta
  * Author: MIGHTYminnow
  * Author URI: https://mightyminnow.com
  * Text Domain: catei
