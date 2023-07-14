@@ -34,5 +34,8 @@ The **Alternative Text** field is set by default to **"Attachment Alt Text"**, t
 
 == Changelog ==
 
+= 1.0.1 =
+- Fix: Custom/None alt text not working when Image Size is set to "Custom"
+
 = 1.0.0 =
 First Release
