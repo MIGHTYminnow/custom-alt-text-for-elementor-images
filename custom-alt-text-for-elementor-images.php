@@ -61,7 +61,7 @@ class Image_Widget_Custom_Alt {
 
 	public function replace_alt_text( $html, $settings, $image_size_key, $image_key ) {
 		$image = $settings[ $image_key ];
-		$alt = \Elementor\Control_Media::get_image_alt( $image );
+		$alt = get_post_meta( $settings['image']['id'], '_wp_attachment_image_alt', true );
 
 		switch ( $this->element->get_settings( 'alt_text_type' ) ) {
 			case 'custom' :
