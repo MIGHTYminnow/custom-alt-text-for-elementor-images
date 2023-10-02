@@ -1,9 +1,9 @@
 === Custom Alt Text for Elementor Images ===
 Contributors: MIGHTYminnow, aebs90
 Requires at least: 6.2
-Tested up to: 6.2
+Tested up to: 6.3.1
 Requires PHP: 8.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: elementor, alt text, accessibility, seo
@@ -33,6 +33,9 @@ The **Alternative Text** field is set by default to **"Attachment Alt Text"**, t
 3. The 3 different options for the Alternative Text.
 
 == Changelog ==
+
+= 1.0.2 =
+- Fix: Custom/None alt text not working when original alt is empty
 
 = 1.0.1 =
 - Fix: Custom/None alt text not working when Image Size is set to "Custom"
