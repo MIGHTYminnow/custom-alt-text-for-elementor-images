@@ -68,14 +68,14 @@ class Image_Widget_Custom_Alt {
 		switch ( $this->element->get_settings( 'alt_text_type' ) ) {
 			case 'custom' :
 				return str_replace(
-					'alt="' . $alt . '"',
-					'alt="' . $this->element->get_settings( 'custom_alt_text' ) . '"',
+					'alt="' . esc_attr( $alt ) . '"',
+					'alt="' . esc_attr( $this->element->get_settings( 'custom_alt_text' ) ) . '"',
 					$html
 				);
 				break;
 			case 'none':
 				return str_replace(
-					'alt="' . $alt . '"',
+					'alt="' . esc_attr( $alt ) . '"',
 					'alt=""',
 					$html
 				);
