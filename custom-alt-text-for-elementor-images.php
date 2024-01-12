@@ -41,6 +41,9 @@ class Image_Widget_Custom_Alt {
 			[
 				'label' => esc_html__( 'Custom Alt Text', 'catei' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true
+				],
 				'condition' => [
 					'alt_text_type' => 'custom',
 				],
@@ -69,7 +72,7 @@ class Image_Widget_Custom_Alt {
 			case 'custom' :
 				return str_replace(
 					'alt="' . esc_attr( $alt ) . '"',
-					'alt="' . esc_attr( $this->element->get_settings( 'custom_alt_text' ) ) . '"',
+					'alt="' . esc_attr( $this->element->get_settings_for_display( 'custom_alt_text' ) ) . '"',
 					$html
 				);
 				break;
