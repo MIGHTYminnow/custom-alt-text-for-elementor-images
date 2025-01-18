@@ -1,7 +1,7 @@
 === Custom Alt Text for Elementor Images ===
 Contributors: MIGHTYminnow, aebs90
 Requires at least: 6.2
-Tested up to: 6.6.2
+Tested up to: 6.7.1
 Requires PHP: 8.0
 Stable tag: 1.0.3
 License: GPLv2 or later
